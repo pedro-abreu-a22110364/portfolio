@@ -5,81 +5,149 @@
   box-sizing: border-box;
 }
 
-/* Define o estilo do menu sticky */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgb(190, 190, 190);
-    padding: 10px;
-    z-index: 1;
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 1;
 }
 
-/* Define o estilo da seção hero */
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(59, 59, 59);
+  font-weight: bolder;
+  font-size: larger;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  font-size: 16px;
+  color: rgb(59, 59, 59);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(59, 59, 59);
+  font-weight: bolder;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-	overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(images/programming.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
 }
 
-/* Define o estilo do texto */
 .texto {
-    flex: 1;
-    padding: 20px;
-    color: black;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 45px;
+  flex: 1;
+  padding: 20px;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 45px;
 }
 
 h1 {
-    font-size: 250%;
+  font-size: 250%;
 }
 
-.texto p {
-    padding: 10%;
+.me {
+  margin-bottom: 10%;
 }
 
-/* Define o estilo da imagem */
-.imagem {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
+article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(images/gaming.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
 }
 
-/* Define o estilo da imagem dentro da div .imagem */
-.imagem img {
-    max-width: 90%;
-    max-height: 100%;
+article > p {
+  padding: 5%;
+  color: whitesmoke;
+  font-size: 200%;
 }
 
-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
+footer {
+  display: flex;
+  height: 5vh;
+  background: black;
+  color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vh;
+  opacity: 0.9;
 }
 
 @media only screen and (min-width: 601px), (orientation: landscape) {
   body {
-    
   }
 }
 
 @media only screen and (max-width: 600px), (orientation: portrait) {
   body {
-    
   }
 }
