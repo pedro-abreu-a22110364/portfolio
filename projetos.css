@@ -38,9 +38,11 @@ nav a:hover {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 145vh;
+  height: 95vh;
   position: relative;
   overflow: hidden;
   background-image: url(images/programming.jpg);
@@ -50,12 +52,12 @@ nav a:hover {
 }
 
 .hero > p {
-    color: whitesmoke;
-    font-weight: 500;
-    font-size: 200%;
-    padding: 10px;
-    text-align: center;
-    margin-top: 3%;
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 200%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 3%;
 }
 
 .capitais {
@@ -66,12 +68,14 @@ nav a:hover {
   padding: 10px;
 }
 
-.capitais > div {
+.capitais > a {
   display: flex;
   justify-content: space-around;
   border-radius: 50px;
   box-shadow: 5px 5px 15px #888888;
   margin: 10px;
+  text-decoration: none;
+  color: black;
 }
 
 .capitais img {
@@ -79,7 +83,7 @@ nav a:hover {
   height: 100%;
 }
 
-.capitais div div:last-child {
+.capitais a div:last-child {
   width: 150px;
   background-color: white;
   padding: 20px;
