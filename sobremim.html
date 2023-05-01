@@ -18,6 +18,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="scripts.js"></script>
     
   </head>
 
@@ -26,10 +28,10 @@
     <header>
 
       <nav>
-        <a href="hero.html">Home</a>
-        <a href="hero.html"><i class="fas fa-arrow-left"></i></a>
+        <a href="index.html">Home</a>
+        <a href="index.html" onmouseover="displayTextHome()" onmouseout="displayLeftArrow()" id="hero"><i class="fas fa-arrow-left"></i></a>
         <a href="calculadora.html">JavaScript Playground</a>
-        <a href="projetos.html">Projetos</a>
+        <a href="projetos.html" onmouseover="displayTextPortfolio()" onmouseout="displayRightArrow()" id="portfolio"><i class="fas fa-arrow-right"></i></a>
         
         <a href="nigga.html"><i class="fas fa-sun"></i></a>
       </nav>
@@ -172,10 +174,10 @@
     
             <div>
                 <div>
-                    <img src="images/empenho.png">
+                    <img src="images/equipa.png">
                 </div>
                 <div>
-                    <p>Empenhado</p>
+                    <p>Trabalho em equipa</p>
                 </div>
             </div>
     

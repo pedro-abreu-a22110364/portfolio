@@ -38,9 +38,11 @@ nav a:hover {
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 145vh;
+  height: 95vh;
   position: relative;
   overflow: hidden;
   background-image: url(images/programming.jpg);
@@ -49,17 +51,20 @@ nav a:hover {
   background-blend-mode: multiply;
 }
 
-.hero > p {
-  color: whitesmoke;
-  font-weight: 500;
-  font-size: 200%;
-  padding: 10px;
-  text-align: center;
-  margin-top: 3%;
+.hero > div {
+  margin-bottom: 1%;
+}
+
+input {
+  width: 100%;
 }
 
 #result {
     color: whitesmoke;
+}
+
+label {
+  color: whitesmoke;
 }
 
 footer {

@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <script src="calculadora.js"></script>
+    <script src="scripts.js"></script>
     
   </head>
 
@@ -28,10 +28,10 @@
     <header>
 
       <nav>
-        <a href="hero.html">Home</a>
-        <a href="hero.html"><i class="fas fa-arrow-left"></i></a>
+        <a href="index.html">Home</a>
+        <a></a>
         <a onmouseover="displayDate()" onmouseout="displayText()" id="date">Data aqui!</a>
-        <a href="projetos.html">Imagem</a>
+        <a href="nome.html">Nome</a>
         
         <a href="nigga.html"><i class="fas fa-sun"></i></a>
       </nav>
@@ -45,10 +45,19 @@
             <button onclick="calcular()">Calcular</button>
             <button onclick="limparResultado()">Limpar</button>
         </div>
+
         <div>
             <p id="result"></p>
         </div>
-          
+
+        <form onsubmit="return colocarFraseImg()">
+            <label for="input">Insira uma frase que a imagem o tenha inspirado:</label>
+            <input type="text" id="input" name="input">
+            <br><br>
+            <img src="images/hoquei.png" id="imagem">
+            <br><br>
+            <input type="submit" value="Inserir frase">
+        </form>    
 
     </section>
 
