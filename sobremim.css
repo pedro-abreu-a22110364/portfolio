@@ -11,6 +11,7 @@ header {
   width: 100%;
   background-color: whitesmoke;
   z-index: 1;
+  grid-area: header;
 }
 
 nav {
@@ -47,6 +48,7 @@ nav a:hover {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
+  grid-area: hero;
 }
 
 .hero > p {
@@ -66,7 +68,7 @@ nav a:hover {
   padding: 10px;
 }
 
-.capitais > div {
+.capitais > a {
   display: flex;
   justify-content: space-around;
   border-radius: 50px;
@@ -79,7 +81,7 @@ nav a:hover {
   height: 100%;
 }
 
-.capitais div div:last-child {
+.capitais a div:last-child {
   width: 150px;
   background-color: white;
   padding: 20px;
@@ -98,14 +100,46 @@ footer {
   justify-content: center;
   font-size: 2vh;
   opacity: 0.9;
+  grid-area: footer;
 }
 
 @media only screen and (min-width: 601px), (orientation: landscape) {
   body {
+    display: grid;
+    width: 100%;
+    height: 150vh;
+
+    grid-template-rows: 5vh 1fr 5vh;
+    grid-template-columns: 100%;
+
+    grid-template-areas: 
+    'header'
+    'hero'
+    'footer';
   }
 }
 
 @media only screen and (max-width: 600px), (orientation: portrait) {
   body {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+
+    grid-template-rows: 5vh 1fr 10vh;
+    grid-template-columns: 100%;
+
+    grid-template-areas: 
+    'header'
+    'hero'
+    'footer';
+  }
+
+  .hero {
+    height: 335vh;
+  }
+
+  
+  footer {
+    font-size: 80%;
   }
 }
